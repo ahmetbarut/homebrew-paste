@@ -5,9 +5,10 @@ class Paste < Formula
     version "0.1"
     sha256 "188e7fcb1d7c46564642d4ca776c739871b76836b4d76a8c9e5478ae70cce47f"
     license ""
-  
+
     def install
-      system "./configure", *std_configure_args, "--disable-silent-rules"
+        bin.install "paste.phar" => "paste-app"
+        system "./configure", *std_configure_args, "--disable-silent-rules"
     end
   end
   
